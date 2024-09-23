@@ -73,17 +73,17 @@ export default function Contact(){
                     })
                 }
 
-                {
-                    !isLoading && Object.keys(data.phone).map(key => {
-                       return <ItemCard label={key} value={data.phone[key]}/>
-                    })
-                }
+                // {
+                //     !isLoading && Object.keys(data.phone).map(key => {
+                //        return <ItemCard label={key} value={data.phone[key]}/>
+                //     })
+                // }
 
-                {
-                    !isLoading && Object.keys(data.social).map(key => {
-                       return <ItemCard label={key} value={data.social[key]}/>
-                    })
-                }
+                // {
+                //     !isLoading && Object.keys(data.social).map(key => {
+                //        return <ItemCard label={key} value={data.social[key]}/>
+                //     })
+                // }
                 
                    
                 </div>
