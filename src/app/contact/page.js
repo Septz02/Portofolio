@@ -1,31 +1,31 @@
 "use client"
 import { useState, useEffect } from 'react'
 
-// const ItemCard = ({label, value})=>{
-//     return (
-//         <div className='flex gap-4 bg-white  rounded-md m-2 p-2'>
-//             <div>{ label }</div>
-//             <div>{ value }</div>
-//         </div>
-//     )
+const ItemCard = ({label, value})=>{
+    return (
+        <div className='flex gap-4 bg-white  rounded-md m-2 p-2'>
+            <div>{ label }</div>
+            <div>{ value }</div>
+        </div>
+    )
     
-// }
+}
 
 export default function Contact(){
-    // const [data, setData] = useState([])
-    // const [isLoading, setLoading] = useState(true)
+    const [data, setData] = useState([])
+    const [isLoading, setLoading] = useState(true)
 
-    // async function onLoadData() {
-    //     setLoading(true)
-    //     let res = await fetch('/api/contact')
-    //     let data = await res.json()
-    //     setData(data)
-    //     setLoading(false)
-    // }
+    async function onLoadData() {
+        setLoading(true)
+        let res = await fetch('/api/contact')
+        let data = await res.json()
+        setData(data)
+        setLoading(false)
+    }
 
-    // useEffect(() => {
-    //     onLoadData()
-    // }, [])
+    useEffect(() => {
+        onLoadData()
+    }, [])
 
     return (
         <> 
@@ -67,11 +67,11 @@ export default function Contact(){
                 </div>
                 <div className="md:w-1/3">
 
-                {/* {
+                {
                     !isLoading && Object.keys(data.location).map(key => {
                        return <ItemCard label={key} value={data.location[key]}/>
                     })
-                }                 */}
+                }                
                    
                 </div>
             </div>
